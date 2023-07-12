@@ -1,0 +1,65 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: dodgerblue;
+    margin: 0 auto;
+    color: white;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: hotpink;
+    width: 50%;
+    margin: 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 5px;
+}
+
+.themeSelector {
+    display: flex;
+}
+
+.themeSelector span {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Additional styles for each theme */
+.light {
+    background-color: #ffffff;
+}
+
+.medium {
+    background-color: #cccccc;
+}
+
+.dark {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.gradientBlue {
+    background-image: linear-gradient(to right, #4b8bbe, #3b5998);
+    color: #ffffff;
+}
+
+.gradientMix {
+    background-image: linear-gradient(to right, #ff9a9e, #fad0c4);
+}
+
+.gradientViolet {
+    background-image: linear-gradient(to right, #7b4397, #dc2430);
+    color: #ffffff;
+}
