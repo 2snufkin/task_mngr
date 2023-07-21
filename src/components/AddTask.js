@@ -1,6 +1,6 @@
 import styles from "../css/add-task.module.css"
 import {useState} from "react";
-export const AddTask = ({tasks,setTasks})=> {
+export const AddTask = ({tasks,setTasks, task, setTask})=> {
     const [taskName, setTaskName] = useState("");
     function handleSumbit(e) {
         // prevent refresh
@@ -35,7 +35,7 @@ export const AddTask = ({tasks,setTasks})=> {
     return (
         <section className={styles.addTask}>
             <form onSubmit={handleSumbit}>
-                <input type="text" autoComplete="off" name="task" placeholder="add task" maxLength="25"/>
+                <input type="text" autoComplete="off" name="task" placeholder="add task" maxLength="25" />
                 <button className="btn btn-primary" type="submit">Add</button>
             </form>
         </section>

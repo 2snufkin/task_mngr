@@ -3,6 +3,7 @@ import {NavBar} from "./components/NavBar";
 import {AddTask} from "./components/AddTask";
 import {TaskList} from "./components/TaskList";
 import React, {useState} from "react";
+import {TasksInfo} from "./components/TasksInfo";
 
 function App() {
     const tasksList =
@@ -59,12 +60,15 @@ function App() {
             }
         ]
     const [tasks, setTasks] = useState(tasksList);
+    const [task, setTask] = useState({});
 
     return (
     <div className="App">
       <NavBar />
-      <AddTask tasks={tasks} setTasks={setTasks}/>
-      <TaskList tasks={tasks} setTasks={setTasks} />
+      <AddTask task= {task} setTask={setTask} tasks={tasks} setTasks={setTasks}/>
+        <TasksInfo setTasks={setTasks} tasks={tasks}/>
+
+        <TaskList task = {task} setTask={setTask} tasks={tasks} setTasks={setTasks} />
     </div>
   );
 }
