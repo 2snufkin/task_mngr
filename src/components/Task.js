@@ -7,6 +7,8 @@ export const Task = ({task}) => {
                 <div className={styles.card_body}>
                     <li className="bold">{task.name}</li>
                     <li>{task.date}</li>
+                    <i className="material-icons">edit</i>
+                    <i className="material-icons">delete</i>
                 </div>
 
         </div>
