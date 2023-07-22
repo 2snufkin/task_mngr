@@ -1,7 +1,6 @@
 import styles from "../css/add-task.module.css"
 import {useState} from "react";
 export const AddTask = ({tasks,setTasks, task, setTask})=> {
-    let buttonText = task ? "Modify" : "Add"; // Use ternary operator to set buttonText    function handleSumbit(e) {
 
      function handleSumbit(e)  {
         // prevent refresh
@@ -62,7 +61,7 @@ export const AddTask = ({tasks,setTasks, task, setTask})=> {
         <section className={styles.addTask}>
             <form onSubmit={handleSumbit}>
                 <input type="text" autoComplete="off" name="task" placeholder="add task" maxLength="25" value={task.name}  onChange={(formEvent)=> handelInput(formEvent)}/>
-                <button className="btn btn-primary" type="submit">{buttonText}</button>
+                <button className="btn btn-primary" type="submit">{task.id? "Modify" : "Add"}</button>
             </form>
         </section>
     )
