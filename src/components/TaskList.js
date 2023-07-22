@@ -9,7 +9,12 @@ export const TaskList = ({tasks, setTasks, setTask, task})=> {
         <section className={styles.showTasks}>
             <div className={styles.task_list}>
                 {tasks.map((single_task) =>
-                    <Task single_task={single_task} setTask={setTask} setTasks={setTasks} tasks={tasks} task={task} key={task.id}/>)}
+                    <Task single_task={single_task}
+                          setTask={setTask}
+                          setTasks={setTasks}
+                          tasks={tasks}
+                          task={task}
+                          key={single_task.id}/>)}
             </div>
 
         </section>

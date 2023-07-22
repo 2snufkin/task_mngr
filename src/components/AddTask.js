@@ -1,29 +1,48 @@
 import styles from "../css/add-task.module.css"
 import {useState} from "react";
 export const AddTask = ({tasks,setTasks, task, setTask})=> {
-    const [taskName, setTaskName] = useState("");
-    function handleSumbit(e) {
+    let buttonText = task ? "Modify" : "Add"; // Use ternary operator to set buttonText    function handleSumbit(e) {
+
+     function handleSumbit(e)  {
         // prevent refresh
         e.preventDefault();
-        // create task object
         let taskName = e.target.task.value;
-        console.log(taskName);
-        const date = new Date();
-        const newTask = {
-            id: e.timeStamp,
-            name: taskName,
-            date: getTodayDateString()
+        if (task.id){
+            // we called setTask(task) and it's mean we are on edit mode'
+            console.log("if task in modify mode")
+            const id = task.id
+            const updatedList = tasks.map( task =>
+                task.id === id ? {
+                    id: id,
+                    name: taskName ,
+                    date: getTodayDateString()
+                } : task
+            );
+            setTasks(updatedList);
+            setTask({});
+        } else{
+            // cwe are in add new task mode: reate task object
+            let taskName = e.target.task.value;
+            console.log(taskName);
+            const newTask = {
+                id: e.timeStamp,
+                name: taskName,
+                date: getTodayDateString()
+            }
+            // add to tasks
+            setTasks([...tasks, newTask]);
+            e.target.task.value = "";
         }
-        // add to tasks
-        setTasks([...tasks, newTask]);
-        e.target.task.value = "";
     }
 
+
+
+
     function getTodayDateString() {
-        var today = new Date();
-        var day = String(today.getDate()).padStart(2, '0');
-        var month = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-        var year = today.getFullYear();
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+        const year = today.getFullYear();
 
         return day + '-' + month + '-' + year;
     }
@@ -32,11 +51,18 @@ export const AddTask = ({tasks,setTasks, task, setTask})=> {
     console.log(getTodayDateString());
 
 
+    function handelInput(e) {
+        let taskName = e.target.value;
+        console.log(taskName);
+        setTask({...task, name: taskName})
+
+    }
+
     return (
         <section className={styles.addTask}>
             <form onSubmit={handleSumbit}>
-                <input type="text" autoComplete="off" name="task" placeholder="add task" maxLength="25" />
-                <button className="btn btn-primary" type="submit">Add</button>
+                <input type="text" autoComplete="off" name="task" placeholder="add task" maxLength="25" value={task.name}  onChange={(formEvent)=> handelInput(formEvent)}/>
+                <button className="btn btn-primary" type="submit">{buttonText}</button>
             </form>
         </section>
     )
