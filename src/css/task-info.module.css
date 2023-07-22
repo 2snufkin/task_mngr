@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally center the header within the container */
+    margin: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px;
+    background-color: hotpink;
+    width: 50%;
+}

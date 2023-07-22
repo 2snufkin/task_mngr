@@ -1,4 +1,4 @@
-import styles from "../css/navbar.module.css";
+import styles from "../css/task-info.module.css";
 
 export const TasksInfo = ({ tasks, setTasks}) => {
 
@@ -8,8 +8,8 @@ export const TasksInfo = ({ tasks, setTasks}) => {
     }
 
     return (
-        <div className={styles.header}>
-            <div className={styles.logo}>
+        <div className={styles.container}>
+            <div className={styles.header}>
                 <p>To Do <span className="circle"> {tasks.length}</span> </p>
             </div>
              <button className="btn btn-danger"  onClick={clearAll}>Clear All</button>

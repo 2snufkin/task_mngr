@@ -1,0 +1,7 @@
+when i click on edit i want
+to change the button from add to modify
+to fill the input with the task
+
+
+when clicking on modify
+setTask to the new task
