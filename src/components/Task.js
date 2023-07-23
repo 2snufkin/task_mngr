@@ -16,7 +16,6 @@ export const Task = ({tasks, setTasks, setTask, single_task}) => {
                 <div className={styles.card_body}>
                     <li className="bold">{single_task.name}</li>
                     <li>{single_task.date}</li>
-                    <li>{single_task.id}</li>
                      <i className="material-icons"  onClick={()=> handleEdit(single_task)} >edit</i>
                     <i className="material-icons" onClick={()=> handleDelete(single_task.id)}>delete</i>
                 </div>
