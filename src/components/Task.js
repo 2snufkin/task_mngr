@@ -1,11 +1,10 @@
 import styles from "../css/task.module.css"
-export const Task = ({tasks, task, setTasks, setTask, single_task}) => {
+
+export const Task = ({tasks, setTasks, setTask, single_task}) => {
 
 
     function handleDelete(id) {
-        console.log(id)
         const updatedList  = tasks.filter(task => task.id !== id);
-        console.log(updatedList)
         setTasks(updatedList);
     }
     function handleEdit(single_task) {

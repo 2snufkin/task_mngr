@@ -1,0 +1,54 @@
+:root {
+    --box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+
+    background-size: 100% 100%;
+}
+
+/* themes */
+
+.light {
+    background-repeat: no-repeat;
+
+    background-color: #FFFFFF;
+    transition: all 500ms;
+}
+
+.medium {
+    background-color: #ea9494;
+    transition: all 500ms;
+}
+
+.dark {
+    background-color: #15202B;
+    transition: all 500ms;
+}
+
+.gradientBlue {
+    background: linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+    transition: all 700ms;
+}
+
+.gradientViolet {
+    background: linear-gradient(90deg, hsla(270, 75%, 60%, 1) 0%, hsla(320, 87%, 36%, 1) 100%);
+    transition: all 700ms;
+}
+.green{
+    background: linear-gradient(90deg, hsla(120, 75%, 60%, 1) 0%, hsla(180, 87%, 36%, 1) 100%);
+    transition: all 700ms;
+
+}
+
+
+/* themes */

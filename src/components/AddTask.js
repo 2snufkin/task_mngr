@@ -1,5 +1,5 @@
 import styles from "../css/add-task.module.css"
-import {useState} from "react";
+
 export const AddTask = ({tasks,setTasks, task, setTask})=> {
 
      function handleSumbit(e)  {
@@ -8,7 +8,6 @@ export const AddTask = ({tasks,setTasks, task, setTask})=> {
         let taskName = e.target.task.value;
         if (task.id){
             // we called setTask(task) and it's mean we are on edit mode'
-            console.log("if task in modify mode")
             const id = task.id
             const updatedList = tasks.map( task =>
                 task.id === id ? {
@@ -22,7 +21,6 @@ export const AddTask = ({tasks,setTasks, task, setTask})=> {
         } else{
             // cwe are in add new task mode: reate task object
             let taskName = e.target.task.value;
-            console.log(taskName);
             const newTask = {
                 id: e.timeStamp,
                 name: taskName,
@@ -47,12 +45,10 @@ export const AddTask = ({tasks,setTasks, task, setTask})=> {
     }
 
 // Example usage:
-    console.log(getTodayDateString());
 
 
     function handelInput(e) {
         let taskName = e.target.value;
-        console.log(taskName);
         setTask({...task, name: taskName})
 
     }

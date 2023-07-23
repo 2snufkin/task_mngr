@@ -26,40 +26,53 @@ header {
     margin-right: 5px;
 }
 
-.themeSelector {
-    display: flex;
+
+
+.activeTheme {
+    width: 30px;
+    height: 30px;
 }
 
-.themeSelector span {
+/* themes */
+
+.light {
     width: 20px;
     height: 20px;
-    margin-right: 5px;
-}
-
-/* Additional styles for each theme */
-.light {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
+    transition: all 500ms;
 }
 
 .medium {
-    background-color: #cccccc;
+    width: 20px;
+    height: 20px;
+    background-color: #ea9494;
+    transition: all 500ms;
 }
 
 .dark {
-    background-color: #333333;
-    color: #ffffff;
+    width: 20px;
+    height: 20px;
+    background-color: #15202B;
+    transition: all 500ms;
 }
 
 .gradientBlue {
-    background-image: linear-gradient(to right, #4b8bbe, #3b5998);
-    color: #ffffff;
-}
-
-.gradientMix {
-    background-image: linear-gradient(to right, #ff9a9e, #fad0c4);
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+    transition: all 500ms;
 }
 
 .gradientViolet {
-    background-image: linear-gradient(to right, #7b4397, #dc2430);
-    color: #ffffff;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(90deg, hsla(270, 75%, 60%, 1) 0%, hsla(320, 87%, 36%, 1) 100%);
+    transition: all 500ms;
+}
+.green{
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(90deg, hsla(120, 75%, 60%, 1) 0%, hsla(180, 87%, 36%, 1) 100%);
+    transition: all 500ms;
+
 }
